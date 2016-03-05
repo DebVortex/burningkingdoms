@@ -28,7 +28,7 @@ extras_require = {}
 setup(
     name='burningkingdoms',
     version='0.1',
-    description='',  # noqa
+    description='A turn based multiplayer strategy game using pygame.',
     long_description=read(BASE_DIR, 'README.rst'),
     author='Max Brauer',
     author_email='max@max-brauer.de',
