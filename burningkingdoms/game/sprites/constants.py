@@ -42,28 +42,28 @@ PLAYER_BODY_CHOICES = (
 # Returns the body imagepath according to the choosen sex and body
 BODY_IMAGE_DICT = {
     SEX_MALE: {
-        BODY_LIGHT: '/data/src/body/male/light.png',
-        BODY_TANNED: '/data/src/body/male/tanned.png',
-        BODY_TANNED2: '/data/src/body/male/tanned2.png',
-        BODY_DARK: '/data/src/body/male/dark.png',
-        BODY_DARK2: '/data/src/body/male/dark2.png',
-        BODY_DARKELF: '/data/src/body/male/darkelf.png',
-        BODY_DARKELF2: '/data/src/body/male/darkelf2.png',
-        BODY_ORC: '/data/src/body/male/orc.png',
-        BODY_REDORC: '/data/src/body/male/red_orc.png',
-        BODY_SKELETON: '/data/src/body/male/skeleton.png',
+        BODY_LIGHT: 'data/src/body/male/light.png',
+        BODY_TANNED: 'data/src/body/male/tanned.png',
+        BODY_TANNED2: 'data/src/body/male/tanned2.png',
+        BODY_DARK: 'data/src/body/male/dark.png',
+        BODY_DARK2: 'data/src/body/male/dark2.png',
+        BODY_DARKELF: 'data/src/body/male/darkelf.png',
+        BODY_DARKELF2: 'data/src/body/male/darkelf2.png',
+        BODY_ORC: 'data/src/body/male/orc.png',
+        BODY_REDORC: 'data/src/body/male/red_orc.png',
+        BODY_SKELETON: 'data/src/body/male/skeleton.png',
     },
     SEX_FEMALE: {
-        BODY_LIGHT: '/data/src/body/female/light.png',
-        BODY_TANNED: '/data/src/body/female/tanned.png',
-        BODY_TANNED2: '/data/src/body/female/tanned2.png',
-        BODY_DARK: '/data/src/body/female/dark.png',
-        BODY_DARK2: '/data/src/body/female/dark2.png',
-        BODY_DARKELF: '/data/src/body/female/darkelf.png',
-        BODY_DARKELF2: '/data/src/body/female/darkelf2.png',
-        BODY_ORC: '/data/src/body/female/orc.png',
-        BODY_REDORC: '/data/src/body/female/red_orc.png',
-        BODY_SKELETON: '/data/src/body/male/skeleton.png',
+        BODY_LIGHT: 'data/src/body/female/light.png',
+        BODY_TANNED: 'data/src/body/female/tanned.png',
+        BODY_TANNED2: 'data/src/body/female/tanned2.png',
+        BODY_DARK: 'data/src/body/female/dark.png',
+        BODY_DARK2: 'data/src/body/female/dark2.png',
+        BODY_DARKELF: 'data/src/body/female/darkelf.png',
+        BODY_DARKELF2: 'data/src/body/female/darkelf2.png',
+        BODY_ORC: 'data/src/body/female/orc.png',
+        BODY_REDORC: 'data/src/body/female/red_orc.png',
+        BODY_SKELETON: 'data/src/body/male/skeleton.png',
     },
 }
 
@@ -82,38 +82,38 @@ EARS_IMAGE_DICT = {
     SEX_MALE: {
         BODY_LIGHT: {
             EAR_NORMAL: None,
-            EAR_BIG: '/data/src/body/male/ears/bigears_light.png',
-            EAR_ELVE: '/data/src/body/male/ears/elvenears_light.png',
+            EAR_BIG: 'data/src/body/male/ears/bigears_light.png',
+            EAR_ELVE: 'data/src/body/male/ears/elvenears_light.png',
         },
         BODY_TANNED: {
             EAR_NORMAL: None,
-            EAR_BIG: '/data/src/body/male/ears/bigears_tanned.png',
-            EAR_ELVE: '/data/src/body/male/ears/elvenears_tanned.png',
+            EAR_BIG: 'data/src/body/male/ears/bigears_tanned.png',
+            EAR_ELVE: 'data/src/body/male/ears/elvenears_tanned.png',
         },
         BODY_TANNED2: {
             EAR_NORMAL: None,
-            EAR_BIG: '/data/src/body/male/ears/bigears_tanned2.png',
-            EAR_ELVE: '/data/src/body/male/ears/elvenears_tanned2.png',
+            EAR_BIG: 'data/src/body/male/ears/bigears_tanned2.png',
+            EAR_ELVE: 'data/src/body/male/ears/elvenears_tanned2.png',
         },
         BODY_DARK: {
             EAR_NORMAL: None,
-            EAR_BIG: '/data/src/body/male/ears/bigears_dark.png',
-            EAR_ELVE: '/data/src/body/male/ears/elvenears_dark.png',
+            EAR_BIG: 'data/src/body/male/ears/bigears_dark.png',
+            EAR_ELVE: 'data/src/body/male/ears/elvenears_dark.png',
         },
         BODY_DARK2: {
             EAR_NORMAL: None,
-            EAR_BIG: '/data/src/body/male/ears/bigears_dark2.png',
-            EAR_ELVE: '/data/src/body/male/ears/elvenears_dark2.png',
+            EAR_BIG: 'data/src/body/male/ears/bigears_dark2.png',
+            EAR_ELVE: 'data/src/body/male/ears/elvenears_dark2.png',
         },
         BODY_DARKELF: {
             EAR_NORMAL: None,
-            EAR_BIG: '/data/src/body/male/ears/bigears_darkelf.png',
-            EAR_ELVE: '/data/src/body/male/ears/elvenears_darkelf.png',
+            EAR_BIG: 'data/src/body/male/ears/bigears_darkelf.png',
+            EAR_ELVE: 'data/src/body/male/ears/elvenears_darkelf.png',
         },
         BODY_DARKELF2: {
             EAR_NORMAL: None,
-            EAR_BIG: '/data/src/body/male/ears/bigears_darkelf2.png',
-            EAR_ELVE: '/data/src/body/male/ears/elvenears_darkelf2.png',
+            EAR_BIG: 'data/src/body/male/ears/bigears_darkelf2.png',
+            EAR_ELVE: 'data/src/body/male/ears/elvenears_darkelf2.png',
         },
         BODY_ORC: {
             EAR_NORMAL: None,
@@ -134,38 +134,38 @@ EARS_IMAGE_DICT = {
     SEX_FEMALE: {
         BODY_LIGHT: {
             EAR_NORMAL: None,
-            EAR_BIG: '/data/src/body/female/ears/bigears_light.png',
-            EAR_ELVE: '/data/src/body/female/ears/elvenears_light.png',
+            EAR_BIG: 'data/src/body/female/ears/bigears_light.png',
+            EAR_ELVE: 'data/src/body/female/ears/elvenears_light.png',
         },
         BODY_TANNED: {
             EAR_NORMAL: None,
-            EAR_BIG: '/data/src/body/female/ears/bigears_tanned.png',
-            EAR_ELVE: '/data/src/body/female/ears/elvenears_tanned.png',
+            EAR_BIG: 'data/src/body/female/ears/bigears_tanned.png',
+            EAR_ELVE: 'data/src/body/female/ears/elvenears_tanned.png',
         },
         BODY_TANNED2: {
             EAR_NORMAL: None,
-            EAR_BIG: '/data/src/body/female/ears/bigears_tanned2.png',
-            EAR_ELVE: '/data/src/body/female/ears/elvenears_tanned2.png',
+            EAR_BIG: 'data/src/body/female/ears/bigears_tanned2.png',
+            EAR_ELVE: 'data/src/body/female/ears/elvenears_tanned2.png',
         },
         BODY_DARK: {
             EAR_NORMAL: None,
-            EAR_BIG: '/data/src/body/female/ears/bigears_dark.png',
-            EAR_ELVE: '/data/src/body/female/ears/elvenears_dark.png',
+            EAR_BIG: 'data/src/body/female/ears/bigears_dark.png',
+            EAR_ELVE: 'data/src/body/female/ears/elvenears_dark.png',
         },
         BODY_DARK2: {
             EAR_NORMAL: None,
-            EAR_BIG: '/data/src/body/female/ears/bigears_dark2.png',
-            EAR_ELVE: '/data/src/body/female/ears/elvenears_dark2.png',
+            EAR_BIG: 'data/src/body/female/ears/bigears_dark2.png',
+            EAR_ELVE: 'data/src/body/female/ears/elvenears_dark2.png',
         },
         BODY_DARKELF: {
             EAR_NORMAL: None,
-            EAR_BIG: '/data/src/body/female/ears/bigears_darkelf.png',
-            EAR_ELVE: '/data/src/body/female/ears/elvenears_darkelf.png',
+            EAR_BIG: 'data/src/body/female/ears/bigears_darkelf.png',
+            EAR_ELVE: 'data/src/body/female/ears/elvenears_darkelf.png',
         },
         BODY_DARKELF2: {
             EAR_NORMAL: None,
-            EAR_BIG: '/data/src/body/female/ears/bigears_darkelf2.png',
-            EAR_ELVE: '/data/src/body/female/ears/elvenears_darkelf2.png',
+            EAR_BIG: 'data/src/body/female/ears/bigears_darkelf2.png',
+            EAR_ELVE: 'data/src/body/female/ears/elvenears_darkelf2.png',
         },
         BODY_ORC: {
             EAR_NORMAL: None,
@@ -220,26 +220,26 @@ PLAYER_EYE_CHOICES = (
 # Return the eye imagepath according to the choosen sex, body and eyes
 EYE_IMAGE_DICT = {
     SEX_MALE: {
-        EYE_BLUE: '/data/src/body/male/eyes/blue.png',
-        EYE_BROWN: '/data/src/body/male/eyes/brown.png',
-        EYE_GRAY: '/data/src/body/male/eyes/gray.png',
-        EYE_GREEN: '/data/src/body/male/eyes/green.png',
-        EYE_ORANGE: '/data/src/body/male/eyes/orange.png',
-        EYE_PURPLE: '/data/src/body/male/eyes/purple.png',
-        EYE_RED: '/data/src/body/male/eyes/red.png',
-        EYE_YELLOW: '/data/src/body/male/eyes/yellow.png',
-        EYE_SKELETON: '/data/src/body/male/eyes/casting_eyeglow_skeleton.png',
+        EYE_BLUE: 'data/src/body/male/eyes/blue.png',
+        EYE_BROWN: 'data/src/body/male/eyes/brown.png',
+        EYE_GRAY: 'data/src/body/male/eyes/gray.png',
+        EYE_GREEN: 'data/src/body/male/eyes/green.png',
+        EYE_ORANGE: 'data/src/body/male/eyes/orange.png',
+        EYE_PURPLE: 'data/src/body/male/eyes/purple.png',
+        EYE_RED: 'data/src/body/male/eyes/red.png',
+        EYE_YELLOW: 'data/src/body/male/eyes/yellow.png',
+        EYE_SKELETON: 'data/src/body/male/eyes/casting_eyeglow_skeleton.png',
     },
     SEX_FEMALE: {
-        EYE_BLUE: '/data/src/body/female/eyes/blue.png',
-        EYE_BROWN: '/data/src/body/female/eyes/brown.png',
-        EYE_GRAY: '/data/src/body/female/eyes/gray.png',
-        EYE_GREEN: '/data/src/body/female/eyes/green.png',
-        EYE_ORANGE: '/data/src/body/female/eyes/orange.png',
-        EYE_PURPLE: '/data/src/body/female/eyes/purple.png',
-        EYE_RED: '/data/src/body/female/eyes/red.png',
-        EYE_YELLOW: '/data/src/body/female/eyes/yellow.png',
-        EYE_SKELETON: '/data/src/body/male/eyes/casting_eyeglow_skeleton.png',
+        EYE_BLUE: 'data/src/body/female/eyes/blue.png',
+        EYE_BROWN: 'data/src/body/female/eyes/brown.png',
+        EYE_GRAY: 'data/src/body/female/eyes/gray.png',
+        EYE_GREEN: 'data/src/body/female/eyes/green.png',
+        EYE_ORANGE: 'data/src/body/female/eyes/orange.png',
+        EYE_PURPLE: 'data/src/body/female/eyes/purple.png',
+        EYE_RED: 'data/src/body/female/eyes/red.png',
+        EYE_YELLOW: 'data/src/body/female/eyes/yellow.png',
+        EYE_SKELETON: 'data/src/body/male/eyes/casting_eyeglow_skeleton.png',
     },
 }
 
@@ -260,45 +260,45 @@ NOSE_IMAGE_DICT = {
     SEX_MALE: {
         BODY_LIGHT: {
             NOSE_NORMAL: None,
-            NOSE_BIG: '/data/src/body/male/nose/bignose_light.png',
-            NOSE_BUTTON: '/data/src/body/male/nose/buttonnose_light.png',
-            NOSE_STRAIGHT: '/data/src/body/male/nose/straightnose_light.png',
+            NOSE_BIG: 'data/src/body/male/nose/bignose_light.png',
+            NOSE_BUTTON: 'data/src/body/male/nose/buttonnose_light.png',
+            NOSE_STRAIGHT: 'data/src/body/male/nose/straightnose_light.png',
         },
         BODY_TANNED: {
             NOSE_NORMAL: None,
-            NOSE_BIG: '/data/src/body/male/nose/bignose_tanned.png',
-            NOSE_BUTTON: '/data/src/body/male/nose/buttonnose_tanned.png',
-            NOSE_STRAIGHT: '/data/src/body/male/nose/straightnose_tanned.png',
+            NOSE_BIG: 'data/src/body/male/nose/bignose_tanned.png',
+            NOSE_BUTTON: 'data/src/body/male/nose/buttonnose_tanned.png',
+            NOSE_STRAIGHT: 'data/src/body/male/nose/straightnose_tanned.png',
         },
         BODY_TANNED2: {
             NOSE_NORMAL: None,
-            NOSE_BIG: '/data/src/body/male/nose/bignose_tanned2.png',
-            NOSE_BUTTON: '/data/src/body/male/nose/buttonnose_tanned2.png',
-            NOSE_STRAIGHT: '/data/src/body/male/nose/straightnose_tanned2.png',
+            NOSE_BIG: 'data/src/body/male/nose/bignose_tanned2.png',
+            NOSE_BUTTON: 'data/src/body/male/nose/buttonnose_tanned2.png',
+            NOSE_STRAIGHT: 'data/src/body/male/nose/straightnose_tanned2.png',
         },
         BODY_DARK: {
             NOSE_NORMAL: None,
-            NOSE_BIG: '/data/src/body/male/nose/bignose_dark.png',
-            NOSE_BUTTON: '/data/src/body/male/nose/buttonnose_dark.png',
-            NOSE_STRAIGHT: '/data/src/body/male/nose/straightnose_dark.png',
+            NOSE_BIG: 'data/src/body/male/nose/bignose_dark.png',
+            NOSE_BUTTON: 'data/src/body/male/nose/buttonnose_dark.png',
+            NOSE_STRAIGHT: 'data/src/body/male/nose/straightnose_dark.png',
         },
         BODY_DARK2: {
             NOSE_NORMAL: None,
-            NOSE_BIG: '/data/src/body/male/nose/bignose_dark2.png',
-            NOSE_BUTTON: '/data/src/body/male/nose/buttonnose_dark2.png',
-            NOSE_STRAIGHT: '/data/src/body/male/nose/straightnose_dark2.png',
+            NOSE_BIG: 'data/src/body/male/nose/bignose_dark2.png',
+            NOSE_BUTTON: 'data/src/body/male/nose/buttonnose_dark2.png',
+            NOSE_STRAIGHT: 'data/src/body/male/nose/straightnose_dark2.png',
         },
         BODY_DARKELF: {
             NOSE_NORMAL: None,
-            NOSE_BIG: '/data/src/body/male/nose/bignose_darkelf.png',
-            NOSE_BUTTON: '/data/src/body/male/nose/buttonnose_darkelf.png',
-            NOSE_STRAIGHT: '/data/src/body/male/nose/straightnose_darkelf.png',
+            NOSE_BIG: 'data/src/body/male/nose/bignose_darkelf.png',
+            NOSE_BUTTON: 'data/src/body/male/nose/buttonnose_darkelf.png',
+            NOSE_STRAIGHT: 'data/src/body/male/nose/straightnose_darkelf.png',
         },
         BODY_DARKELF2: {
             NOSE_NORMAL: None,
-            NOSE_BIG: '/data/src/body/male/nose/bignose_darkelf2.png',
-            NOSE_BUTTON: '/data/src/body/male/nose/buttonnose_darkelf2.png',
-            NOSE_STRAIGHT: '/data/src/body/male/nose/straightnose_darkelf2.png',
+            NOSE_BIG: 'data/src/body/male/nose/bignose_darkelf2.png',
+            NOSE_BUTTON: 'data/src/body/male/nose/buttonnose_darkelf2.png',
+            NOSE_STRAIGHT: 'data/src/body/male/nose/straightnose_darkelf2.png',
         },
         BODY_ORC: {
             NOSE_NORMAL: None,
@@ -322,45 +322,45 @@ NOSE_IMAGE_DICT = {
     SEX_FEMALE: {
         BODY_LIGHT: {
             NOSE_NORMAL: None,
-            NOSE_BIG: '/data/src/body/female/nose/bignose_light.png',
-            NOSE_BUTTON: '/data/src/body/female/nose/buttonnose_light.png',
-            NOSE_STRAIGHT: '/data/src/body/female/nose/straightnose_light.png',
+            NOSE_BIG: 'data/src/body/female/nose/bignose_light.png',
+            NOSE_BUTTON: 'data/src/body/female/nose/buttonnose_light.png',
+            NOSE_STRAIGHT: 'data/src/body/female/nose/straightnose_light.png',
         },
         BODY_TANNED: {
             NOSE_NORMAL: None,
-            NOSE_BIG: '/data/src/body/female/nose/bignose_tanned.png',
-            NOSE_BUTTON: '/data/src/body/female/nose/buttonnose_tanned.png',
-            NOSE_STRAIGHT: '/data/src/body/female/nose/straightnose_tanned.png',
+            NOSE_BIG: 'data/src/body/female/nose/bignose_tanned.png',
+            NOSE_BUTTON: 'data/src/body/female/nose/buttonnose_tanned.png',
+            NOSE_STRAIGHT: 'data/src/body/female/nose/straightnose_tanned.png',
         },
         BODY_TANNED2: {
             NOSE_NORMAL: None,
-            NOSE_BIG: '/data/src/body/female/nose/bignose_tanned2.png',
-            NOSE_BUTTON: '/data/src/body/female/nose/buttonnose_tanned2.png',
-            NOSE_STRAIGHT: '/data/src/body/female/nose/straightnose_tanned2.png',
+            NOSE_BIG: 'data/src/body/female/nose/bignose_tanned2.png',
+            NOSE_BUTTON: 'data/src/body/female/nose/buttonnose_tanned2.png',
+            NOSE_STRAIGHT: 'data/src/body/female/nose/straightnose_tanned2.png',
         },
         BODY_DARK: {
             NOSE_NORMAL: None,
-            NOSE_BIG: '/data/src/body/female/nose/bignose_dark.png',
-            NOSE_BUTTON: '/data/src/body/female/nose/buttonnose_dark.png',
-            NOSE_STRAIGHT: '/data/src/body/female/nose/straightnose_dark.png',
+            NOSE_BIG: 'data/src/body/female/nose/bignose_dark.png',
+            NOSE_BUTTON: 'data/src/body/female/nose/buttonnose_dark.png',
+            NOSE_STRAIGHT: 'data/src/body/female/nose/straightnose_dark.png',
         },
         BODY_DARK2: {
             NOSE_NORMAL: None,
-            NOSE_BIG: '/data/src/body/female/nose/bignose_dark2.png',
-            NOSE_BUTTON: '/data/src/body/female/nose/buttonnose_dark2.png',
-            NOSE_STRAIGHT: '/data/src/body/female/nose/straightnose_dark2.png',
+            NOSE_BIG: 'data/src/body/female/nose/bignose_dark2.png',
+            NOSE_BUTTON: 'data/src/body/female/nose/buttonnose_dark2.png',
+            NOSE_STRAIGHT: 'data/src/body/female/nose/straightnose_dark2.png',
         },
         BODY_DARKELF: {
             NOSE_NORMAL: None,
-            NOSE_BIG: '/data/src/body/female/nose/bignose_darkelf.png',
-            NOSE_BUTTON: '/data/src/body/female/nose/buttonnose_darkelf.png',
-            NOSE_STRAIGHT: '/data/src/body/female/nose/straightnose_darkelf.png',
+            NOSE_BIG: 'data/src/body/female/nose/bignose_darkelf.png',
+            NOSE_BUTTON: 'data/src/body/female/nose/buttonnose_darkelf.png',
+            NOSE_STRAIGHT: 'data/src/body/female/nose/straightnose_darkelf.png',
         },
         BODY_DARKELF2: {
             NOSE_NORMAL: None,
-            NOSE_BIG: '/data/src/body/female/nose/bignose_darkelf2.png',
-            NOSE_BUTTON: '/data/src/body/female/nose/buttonnose_darkelf2.png',
-            NOSE_STRAIGHT: '/data/src/body/female/nose/straightnose_darkelf2.png',
+            NOSE_BIG: 'data/src/body/female/nose/bignose_darkelf2.png',
+            NOSE_BUTTON: 'data/src/body/female/nose/buttonnose_darkelf2.png',
+            NOSE_STRAIGHT: 'data/src/body/female/nose/straightnose_darkelf2.png',
         },
         BODY_ORC: {
             NOSE_NORMAL: None,
@@ -593,7 +593,7 @@ def get_hair_path(sex, hair_type, hair_color):
         hair_type_txt = HAIR_TYPE_FEMALE_DICT.get(hair_type)
         hair_color_txt = HAIR_COLOR_FEMALE_DICT.get(hair_color)
     if hair_color_txt and hair_type_txt:
-        return '/data/src/hair/%s/%s' % (hair_type_txt, hair_color_txt)
+        return 'data/src/hair/%s/%s' % (hair_type_txt, hair_color_txt)
 
 
 # Constants for Belts
@@ -605,18 +605,18 @@ BELT_LEATHER = 2
 BELT_DICT = {
     SEX_MALE: {
         BELT_DEFAULT: None,
-        BELT_CLOTH: '/data/src/belt/cloth/male/white_cloth_male.png',
-        BELT_LEATHER: '/data/src/belt/cloth/female/white_cloth_female.png'
+        BELT_CLOTH: 'data/src/belt/cloth/male/white_cloth_male.png',
+        BELT_LEATHER: 'data/src/belt/cloth/female/white_cloth_female.png'
     },
     SEX_FEMALE: {
         BELT_DEFAULT: None,
-        BELT_CLOTH: '/data/src/belt/leather/male/leather_male.png',
-        BELT_LEATHER: '/data/src/belt/leather/female/leather_female.png'
+        BELT_CLOTH: 'data/src/belt/leather/male/leather_male.png',
+        BELT_LEATHER: 'data/src/belt/leather/female/leather_female.png'
     }
 }
 
 # Constant for quiver. Allways used with bows.
-QUIVER_PATH = '/data/src/equipment/quiver.png'
+QUIVER_PATH = 'data/src/equipment/quiver.png'
 
 # Constants for feets
 FEETS_DEFAULT = 0
@@ -630,19 +630,19 @@ FEETS_GOLD = 5
 FEETS_DICT = {
     SEX_MALE: {
         FEETS_DEFAULT: None,
-        FEETS_BLACK: '/data/src/feet/shoes/male/black_shoes_male.png',
-        FEETS_BROWN: '/data/src/feet/shoes/male/brown_shoes_male.png',
-        FEETS_MAROON: '/data/src/feet/shoes/male/maroon_shoes_male.png',
-        FEETS_METAL: '/data/src/feet/armor/male/metal_shoes_male.png',
-        FEETS_GOLD: '/data/src/feet/armor/male/golden_shoes_male.png',
+        FEETS_BLACK: 'data/src/feet/shoes/male/black_shoes_male.png',
+        FEETS_BROWN: 'data/src/feet/shoes/male/brown_shoes_male.png',
+        FEETS_MAROON: 'data/src/feet/shoes/male/maroon_shoes_male.png',
+        FEETS_METAL: 'data/src/feet/armor/male/metal_boots_male.png',
+        FEETS_GOLD: 'data/src/feet/armor/male/golden_boots_male.png',
     },
     SEX_FEMALE: {
         FEETS_DEFAULT: None,
-        FEETS_BLACK: '/data/src/feet/shoes/female/black_shoes_female.png',
-        FEETS_BROWN: '/data/src/feet/shoes/female/brown_shoes_female.png',
-        FEETS_MAROON: '/data/src/feet/shoes/female/maroon_shoes_female.png',
-        FEETS_METAL: '/data/src/feet/armor/female/metal_shoes_female.png',
-        FEETS_GOLD: '/data/src/feet/armor/female/golden_shoes_female.png',
+        FEETS_BLACK: 'data/src/feet/shoes/female/black_shoes_female.png',
+        FEETS_BROWN: 'data/src/feet/shoes/female/brown_shoes_female.png',
+        FEETS_MAROON: 'data/src/feet/shoes/female/maroon_shoes_female.png',
+        FEETS_METAL: 'data/src/feet/armor/female/metal_boots_female.png',
+        FEETS_GOLD: 'data/src/feet/armor/female/golden_boots_female.png',
     }
 }
 
@@ -656,15 +656,15 @@ HANDS_GOLD = 3
 HANDS_DICT = {
     SEX_MALE: {
         HANDS_DEFAULT: None,
-        HANDS_LEATHER: '/data/src/hands/bracers/male/leather_bracers_male.png',
-        HANDS_METAL: '/data/src/hands/gloves/male/metal_gloves_male.png',
-        HANDS_GOLD: '/data/src/hands/gloves/male/gold_gloves_male.png',
+        HANDS_LEATHER: 'data/src/hands/bracers/male/leather_bracers_male.png',
+        HANDS_METAL: 'data/src/hands/gloves/male/metal_gloves_male.png',
+        HANDS_GOLD: 'data/src/hands/gloves/male/golden_gloves_male.png',
     },
     SEX_FEMALE: {
         HANDS_DEFAULT: None,
-        HANDS_LEATHER: '/data/src/hands/bracers/female/leather_bracers_female.png',
-        HANDS_METAL: '/data/src/hands/gloves/female/metal_gloves_female.png',
-        HANDS_GOLD: '/data/src/hands/gloves/female/gold_gloves_female.png',
+        HANDS_LEATHER: 'data/src/hands/bracers/female/leather_bracers_female.png',
+        HANDS_METAL: 'data/src/hands/gloves/female/metal_gloves_female.png',
+        HANDS_GOLD: 'data/src/hands/gloves/female/golden_gloves_female.png',
     }
 }
 
@@ -680,22 +680,22 @@ LEGS_SKIRT = 6
 # Return the legs Imagepath according to the choosen sex and type
 LEGS_DICT = {
     SEX_MALE: {
-        LEGS_CLOTH_WHITE: '/data/src/legs/pants/male/white_pants_male.png',
-        LEGS_CLOTH_TEAL: '/data/src/legs/pants/male/teal_pants_male.png',
-        LEGS_CLOTH_RED: '/data/src/legs/pants/male/red_pants_male.png',
-        LEGS_CLOTH_MAGENTA: '/data/src/legs/pants/male/magenta_pants_male.png',
-        LEGS_ARMOR_METAL: '/data/src/legs/armor/male/metal_pants_male.png',
-        LEGS_ARMOR_GOLD: '/data/src/legs/armor/male/golden_greaves_male.png',
-        LEGS_SKIRT: '/data/src/legs/skirt/male/robe_skirt_male.png',
+        LEGS_CLOTH_WHITE: 'data/src/legs/pants/male/white_pants_male.png',
+        LEGS_CLOTH_TEAL: 'data/src/legs/pants/male/teal_pants_male.png',
+        LEGS_CLOTH_RED: 'data/src/legs/pants/male/red_pants_male.png',
+        LEGS_CLOTH_MAGENTA: 'data/src/legs/pants/male/magenta_pants_male.png',
+        LEGS_ARMOR_METAL: 'data/src/legs/armor/male/metal_pants_male.png',
+        LEGS_ARMOR_GOLD: 'data/src/legs/armor/male/golden_greaves_male.png',
+        LEGS_SKIRT: 'data/src/legs/skirt/male/robe_skirt_male.png',
     },
     SEX_FEMALE: {
-        LEGS_CLOTH_WHITE: '/data/src/legs/pants/female/white_pants_female.png',
-        LEGS_CLOTH_TEAL: '/data/src/legs/pants/female/teal_pants_female.png',
-        LEGS_CLOTH_RED: '/data/src/legs/pants/female/red_pants_female.png',
-        LEGS_CLOTH_MAGENTA: '/data/src/legs/pants/female/magenta_pants_female.png',
-        LEGS_ARMOR_METAL: '/data/src/legs/armor/female/metal_pants_female.png',
-        LEGS_ARMOR_GOLD: '/data/src/legs/armor/female/golden_greaves_female.png',
-        LEGS_SKIRT: '/data/src/legs/skirt/female/robe_skirt_female.png',
+        LEGS_CLOTH_WHITE: 'data/src/legs/pants/female/white_pants_female.png',
+        LEGS_CLOTH_TEAL: 'data/src/legs/pants/female/teal_pants_female.png',
+        LEGS_CLOTH_RED: 'data/src/legs/pants/female/red_pants_female.png',
+        LEGS_CLOTH_MAGENTA: 'data/src/legs/pants/female/magenta_pants_female.png',
+        LEGS_ARMOR_METAL: 'data/src/legs/armor/female/metal_pants_female.png',
+        LEGS_ARMOR_GOLD: 'data/src/legs/armor/female/golden_greaves_female.png',
+        LEGS_SKIRT: 'data/src/legs/skirt/female/robe_skirt_female.png',
     }
 }
 
@@ -709,15 +709,15 @@ ARMS_GOLD = 3
 ARMS_DICT = {
     SEX_MALE: {
         ARMS_DEFAULT: None,
-        ARMS_LEATHER: '/data/src/torso/leather/male/shoulders_male.png',
-        ARMS_PLATE: '/data/src/torso/plate/male/arms_male.png',
-        ARMS_GOLD: '/data/src/torso/gold/male/arms_male.png',
+        ARMS_LEATHER: 'data/src/torso/leather/male/shoulders_male.png',
+        ARMS_PLATE: 'data/src/torso/plate/male/arms_male.png',
+        ARMS_GOLD: 'data/src/torso/gold/male/arms_male.png',
     },
     SEX_FEMALE: {
         ARMS_DEFAULT: None,
-        ARMS_LEATHER: '/data/src/torso/leather/female/shoulders_female.png',
-        ARMS_PLATE: '/data/src/torso/plate/female/arms_female.png',
-        ARMS_GOLD: '/data/src/torso/gold/female/arms_female.png',
+        ARMS_LEATHER: 'data/src/torso/leather/female/shoulders_female.png',
+        ARMS_PLATE: 'data/src/torso/plate/female/arms_female.png',
+        ARMS_GOLD: 'data/src/torso/gold/female/arms_female.png',
     },
 }
 
@@ -734,26 +734,68 @@ TORSO_GOLD = 7
 # Return the shoulder Imagepath according to the choosen sex and type
 TORSO_DICT = {
     SEX_MALE: {
-        TORSO_CLOTH_WHITE: '/data/src/torso/shirts/male/white_longsleeve.png',
-        TORSO_CLOTH_TEAL: '/data/src/torso/shirts/male/teal_longsleeve.png',
-        TORSO_CLOTH_MAROON: '/data/src/torso/shirts/male/maroon_longsleeve.png',
-        TORSO_CLOTH_BROWN: '/data/src/torso/shirts/male/brown_longsleeve.png',
-        TORSO_LEATHER: '/data/src/torso/leather/male/chest_male.png',
-        TORSO_CHAIN: '/data/src/torso/chain/male/mail_male.png',
-        TORSO_PLATE: '/data/src/torso/plate/male/chest_male.png',
-        TORSO_GOLD: '/data/src/torso/gold/male/chest_male.png',
+        TORSO_CLOTH_WHITE: 'data/src/torso/shirts/male/white_longsleeve.png',
+        TORSO_CLOTH_TEAL: 'data/src/torso/shirts/male/teal_longsleeve.png',
+        TORSO_CLOTH_MAROON: 'data/src/torso/shirts/male/maroon_longsleeve.png',
+        TORSO_CLOTH_BROWN: 'data/src/torso/shirts/male/brown_longsleeve.png',
+        TORSO_LEATHER: 'data/src/torso/leather/male/chest_male.png',
+        TORSO_CHAIN: 'data/src/torso/chain/male/mail_male.png',
+        TORSO_PLATE: 'data/src/torso/plate/male/chest_male.png',
+        TORSO_GOLD: 'data/src/torso/gold/male/chest_male.png',
     },
     SEX_FEMALE: {
-        TORSO_CLOTH_WHITE: '/data/src/torso/shirts/female/white_sleeveless.png',
-        TORSO_CLOTH_TEAL: '/data/src/torso/shirts/female/teal_sleeveless.png',
-        TORSO_CLOTH_MAROON: '/data/src/torso/shirts/female/maroon_sleeveless.png',
-        TORSO_CLOTH_BROWN: '/data/src/torso/shirts/female/brown_sleeveless.png',
-        TORSO_LEATHER: '/data/src/torso/leather/female/chest_male.png',
-        TORSO_CHAIN: '/data/src/torso/chain/female/mail_male.png',
-        TORSO_PLATE: '/data/src/torso/plate/female/chest_male.png',
-        TORSO_GOLD: '/data/src/torso/gold/female/chest_male.png',
+        TORSO_CLOTH_WHITE: 'data/src/torso/shirts/female/white_sleeveless.png',
+        TORSO_CLOTH_TEAL: 'data/src/torso/shirts/female/teal_sleeveless.png',
+        TORSO_CLOTH_MAROON: 'data/src/torso/shirts/female/maroon_sleeveless.png',
+        TORSO_CLOTH_BROWN: 'data/src/torso/shirts/female/brown_sleeveless.png',
+        TORSO_LEATHER: 'data/src/torso/leather/female/chest_female.png',
+        TORSO_CHAIN: 'data/src/torso/chain/female/mail_female.png',
+        TORSO_PLATE: 'data/src/torso/plate/female/chest_female.png',
+        TORSO_GOLD: 'data/src/torso/gold/female/chest_female.png',
     },
 }
 
 # Constants for weapons
 WEAPON_DEFAULT = 0
+WEAPON_BOTH_HANDS_SPEAR = 1
+WEAPON_LEFT_HAND_ARROW = 2
+WEAPON_LEFT_HAND_SKELETON_ARROW = 3
+WEAPON_LEFT_HAND_SHIELD_1 = 4
+WEAPON_LEFT_HAND_SHIELD_2 = 5
+WEAPON_RIGHT_HAND_BOW = 6
+WEAPON_RIGHT_HAND_SKELETON_BOW = 7
+WEAPON_RIGHT_HAND_DAGGER = 8
+WEAPON_RIGHT_HAND_GREATBOW = 9
+WEAPON_RIGHT_HAND_RECURVEBOW = 10
+WEAPON_RIGHT_HAND_WOODWAND = 11
+
+WEAPON_DICT = {
+    SEX_MALE: {
+        WEAPON_DEFAULT: None,
+        WEAPON_BOTH_HANDS_SPEAR: 'data/src/weapons/right_hand/male/spear_male.png',
+        WEAPON_LEFT_HAND_ARROW: 'data/src/weapons/left_hand/arrow.png',
+        WEAPON_LEFT_HAND_SKELETON_ARROW: 'data/src/weapons/left_hand/arrow_skeleton.png',
+        WEAPON_LEFT_HAND_SHIELD_1: 'data/src/weapons/left_hand/shield_male_cutoutforbody.png',
+        WEAPON_LEFT_HAND_SHIELD_2: 'data/src/weapons/left_hand/shield_male_cutoutforhat.png',
+        WEAPON_RIGHT_HAND_BOW: 'data/src/weapons/right hand/male/bow.png',
+        WEAPON_RIGHT_HAND_SKELETON_BOW: 'data/src/weapons/right_hand/male/bow_skeleton.png',
+        WEAPON_RIGHT_HAND_DAGGER: 'data/src/weapons/right_hand/male/dagger_male.png',
+        WEAPON_RIGHT_HAND_GREATBOW: 'data/src/weapons/right_hand/male/greatbow.png',
+        WEAPON_RIGHT_HAND_RECURVEBOW: 'data/src/weapons/right_hand/male/recurvebow.png',
+        WEAPON_RIGHT_HAND_WOODWAND: 'data/src/weapons/right_hand/male/woodwand_male.png',
+    },
+    SEX_FEMALE: {
+        WEAPON_DEFAULT: None,
+        WEAPON_BOTH_HANDS_SPEAR: 'data/src/weapons/right_hand/female/spear_female.png',
+        WEAPON_LEFT_HAND_ARROW: 'data/src/weapons/left_hand/arrow.png',
+        WEAPON_LEFT_HAND_SKELETON_ARROW: 'data/src/weapons/left_hand/arrow_skeleton.png',
+        WEAPON_LEFT_HAND_SHIELD_1: 'data/src/weapons/left_hand/shield_male_cutoutforbody.png',
+        WEAPON_LEFT_HAND_SHIELD_2: 'data/src/weapons/left_hand/shield_male_cutoutforhat.png',
+        WEAPON_RIGHT_HAND_BOW: 'data/src/weapons/right_hand/female/bow.png',
+        WEAPON_RIGHT_HAND_SKELETON_BOW: 'data/src/weapons/right_hand/female/bow_skeleton.png',
+        WEAPON_RIGHT_HAND_DAGGER: 'data/src/weapons/right_hand/female/dagger_female.png',
+        WEAPON_RIGHT_HAND_GREATBOW: 'data/src/weapons/right_hand/female/greatbow.png',
+        WEAPON_RIGHT_HAND_RECURVEBOW: 'data/src/weapons/right_hand/female/recurvebow.png',
+        WEAPON_RIGHT_HAND_WOODWAND: 'data/src/weapons/right_hand/female/woodwand_female.png',
+    }
+}
