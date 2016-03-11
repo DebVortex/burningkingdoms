@@ -2,6 +2,7 @@ import pygame
 from pygame import locals as key
 
 from burningkingdoms.game.scenes.core import Scene
+from burningkingdoms.game.scenes.maps.test import TestScene
 from burningkingdoms.game.sprites.icons import MenuCursor
 
 
@@ -43,7 +44,6 @@ class StartScreen(Scene):
 
         self.menu_rects = [self.single_player_rect, self.multi_player_rect, self.exit_rect]
         self.active_menu_rect = 0
-        self.sprites = pygame.sprite.Group()
         self.cursor = MenuCursor(self, scale=3)
         self.sprites.add(self.cursor)
 
@@ -65,6 +65,8 @@ class StartScreen(Scene):
     def handle_event(self, event):
         if event.key in self.key_events:
             self.key_events[event.key]()
+        if self != self.game.active_scene:
+            del self
 
     def _handle_key_up(self):
         self.active_menu_rect -= 1
@@ -84,7 +86,7 @@ class StartScreen(Scene):
 
     def _handle_key_return(self):
         if self.active_menu_rect == 0:
-            pass
+            self.game.active_scene = TestScene((0, 0, 0), self.game, self.screen)
         elif self.active_menu_rect == 1:
             pass
         elif self.active_menu_rect == 2:
