@@ -25,7 +25,6 @@ class Game(object):
             if event.type == key.KEYUP:
                 self.active_scene.handle_event(event)
 
-    #enter the main loop, possibly setting max FPS
     def main_loop(self):
         self.running = True
         fill = (0, 0, 0)
@@ -33,12 +32,9 @@ class Game(object):
         while self.running:
             pygame.display.set_caption("FPS: {fps}".format(fps=self.clock.get_fps()))
             self.handle_events()
-            self.update()
+            self.active_scene.update()
             self.render()
             self.clock.tick(self.fps)
-
-    def update(self):
-        self.active_scene.update()
 
     def render(self):
         self.screen.blit(self.active_scene.render(), (0, 0))
