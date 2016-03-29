@@ -2,7 +2,7 @@ import pygame
 from pygame import locals as key
 
 from burningkingdoms.game.scenes.core import Scene
-from burningkingdoms.game.scenes.maps.test import TestScene
+from burningkingdoms.game.scenes.maps.sprite_test import SpriteTestScene
 from burningkingdoms.game.sprites.icons import MenuCursor
 
 
@@ -12,7 +12,8 @@ class StartScreen(Scene):
         self.key_events = {
             key.K_UP: self._handle_key_up,
             key.K_DOWN: self._handle_key_down,
-            key.K_RETURN: self._handle_key_return
+            key.K_RETURN: self._handle_key_return,
+            key.K_q: self._handle_key_q
         }
         super(StartScreen, self).__init__(fill, game, screen)
         title_font = pygame.font.SysFont("Arial", 108)
@@ -86,8 +87,11 @@ class StartScreen(Scene):
 
     def _handle_key_return(self):
         if self.active_menu_rect == 0:
-            self.game.active_scene = TestScene((0, 0, 0), self.game, self.screen)
+            pass
         elif self.active_menu_rect == 1:
             pass
         elif self.active_menu_rect == 2:
             self.game.running = False
+
+    def _handle_key_q(self):
+        self.game.active_scene = SpriteTestScene((0, 0, 0), self.game, self.screen)
