@@ -755,6 +755,39 @@ TORSO_DICT = {
     },
 }
 
+# Constants for head eqipment
+HEAD_DEFAULT = 0
+HEAD_BANDANA = 1
+HEAD_LEATHERCAP = 2
+HEAD_CHAIN_HELM = 3
+HEAD_GOLDEN_HELM = 4
+HEAD_METAL_HELM = 5
+HEAD_HOOD_CLOTH = 6
+HEAD_HOOD_CHAIN = 7
+
+HEAD_DICT = {
+    SEX_MALE: {
+        HEAD_DEFAULT: None,
+        HEAD_BANDANA: 'data/src/head/bandanas/male/red.png',
+        HEAD_LEATHERCAP: 'data/src/head/caps/male/leather_cap_male.png',
+        HEAD_CHAIN_HELM: 'data/src/head/helms/male/chainhat_male.png',
+        HEAD_GOLDEN_HELM: 'data/src/head/helms/male/golden_helm_male.png',
+        HEAD_METAL_HELM: 'data/src/head/helms/male/metal_helm_male.png',
+        HEAD_HOOD_CLOTH: 'data/src/head/hoods/male/cloth_hood_male.png',
+        HEAD_HOOD_CHAIN: 'data/src/head/hoods/male/chain_hood_male.png',
+    },
+    SEX_FEMALE: {
+        HEAD_DEFAULT: None,
+        HEAD_BANDANA: 'data/src/head/bandanas/female/red.png',
+        HEAD_LEATHERCAP: 'data/src/head/caps/female/leather_cap_female.png',
+        HEAD_CHAIN_HELM: 'data/src/head/helms/female/chainhat_female.png',
+        HEAD_GOLDEN_HELM: 'data/src/head/helms/female/golden_helm_female.png',
+        HEAD_METAL_HELM: 'data/src/head/helms/female/metal_helm_female.png',
+        HEAD_HOOD_CLOTH: 'data/src/head/hoods/female/cloth_hood_female.png',
+        HEAD_HOOD_CHAIN: 'data/src/head/hoods/female/chain_hood_female.png',
+    }
+}
+
 # Constants for weapons
 WEAPON_DEFAULT = 0
 WEAPON_BOTH_HANDS_SPEAR = 1
@@ -777,7 +810,7 @@ WEAPON_DICT = {
         WEAPON_LEFT_HAND_SKELETON_ARROW: 'data/src/weapons/left_hand/arrow_skeleton.png',
         WEAPON_LEFT_HAND_SHIELD_1: 'data/src/weapons/left_hand/shield_male_cutoutforbody.png',
         WEAPON_LEFT_HAND_SHIELD_2: 'data/src/weapons/left_hand/shield_male_cutoutforhat.png',
-        WEAPON_RIGHT_HAND_BOW: 'data/src/weapons/right hand/male/bow.png',
+        WEAPON_RIGHT_HAND_BOW: 'data/src/weapons/right_hand/male/bow.png',
         WEAPON_RIGHT_HAND_SKELETON_BOW: 'data/src/weapons/right_hand/male/bow_skeleton.png',
         WEAPON_RIGHT_HAND_DAGGER: 'data/src/weapons/right_hand/male/dagger_male.png',
         WEAPON_RIGHT_HAND_GREATBOW: 'data/src/weapons/right_hand/male/greatbow.png',
