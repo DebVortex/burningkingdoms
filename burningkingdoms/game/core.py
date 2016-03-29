@@ -17,6 +17,7 @@ class Game(object):
         self.fps = config.fps
         self.scenes = []
         self.active_scene = None
+        self.dt = 0
 
     def handle_events(self):
         for event in pygame.event.get():
@@ -34,7 +35,7 @@ class Game(object):
             self.handle_events()
             self.active_scene.update()
             self.render()
-            self.clock.tick(self.fps)
+            self.dt = self.clock.tick(self.fps)
 
     def render(self):
         self.screen.blit(self.active_scene.render(), (0, 0))
