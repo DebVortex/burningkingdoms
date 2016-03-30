@@ -4,6 +4,7 @@ import pygame
 from pygame import locals as key
 
 from burningkingdoms.game.sprites.char import CharacterSprite
+from burningkingdoms.game.sprites.constants import MAIN_HAND_WEAPONS, OFF_HAND_WEAPONS
 
 
 class SpriteTestScene(Scene):
@@ -28,6 +29,7 @@ class SpriteTestScene(Scene):
             key.K_t: self._handle_key_t,
             key.K_z: self._handle_key_z,
             key.K_u: self._handle_key_u,
+            key.K_i: self._handle_key_i,
             key.K_o: self._handle_key_o,
             key.K_p: self._handle_key_p,
             key.K_y: self._handle_key_y,
@@ -92,10 +94,10 @@ class SpriteTestScene(Scene):
             "r: head [{}]".format(self.char_sprite.head), 1, (255, 0, 0))
         )
         self.help_text_texts.append(self.font.render(
-            "t: weapon1 [{}]".format(self.char_sprite.weapon1), 1, (255, 0, 0))
+            "t: main hand [{}]".format(self.char_sprite.main_hand), 1, (255, 0, 0))
         )
         self.help_text_texts.append(self.font.render(
-            "z: weapon2 [{}]".format(self.char_sprite.weapon2), 1, (255, 0, 0))
+            "z: off hand [{}]".format(self.char_sprite.off_hand), 1, (255, 0, 0))
         )
         self.help_text_texts.append(self.font.render(
             "----------------------------------", 1, (255, 0, 0))
@@ -241,18 +243,24 @@ class SpriteTestScene(Scene):
             self.char_sprite.hair_type = 0
 
     def _handle_key_t(self):
-        self.char_sprite.weapon1 += 1
-        if self.char_sprite.weapon1 > 11:
-            self.char_sprite.weapon1 = 0
+        self.char_sprite.main_hand += 1
+        if self.char_sprite.main_hand > len(MAIN_HAND_WEAPONS):
+            self.char_sprite.main_hand = 0
 
     def _handle_key_z(self):
-        self.char_sprite.weapon2 += 2
-        if self.char_sprite.weapon2 > 11:
-            self.char_sprite.weapon2 = 0
+        self.char_sprite.off_hand += 1
+        if self.char_sprite.off_hand > len(OFF_HAND_WEAPONS):
+            self.char_sprite.off_hand = 0
 
     def _handle_key_u(self):
         self.char_sprite.animate_once = not self.char_sprite.animate_once
         self.char_sprite.time_passed = 0
+
+    def _handle_key_i(self):
+        quiver = 1
+        if self.char_sprite.quiver:
+            quiver = 0
+        self.char_sprite.quiver = quiver
 
     def _handle_key_o(self):
         self.char_sprite.scale += 0.2

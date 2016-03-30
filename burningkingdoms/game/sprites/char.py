@@ -63,8 +63,8 @@ class CharacterSprite(pygame.sprite.Sprite):
     def __init__(self, scene, scale=1.0, sex=SEX_MALE, body=BODY_LIGHT, ears=EAR_NORMAL, eyes=EYE_BLUE,
             nose=NOSE_NORMAL, hair_color=0, hair_type=0, belt=BELT_DEFAULT, feets=FEETS_DEFAULT,
             hand=HANDS_DEFAULT, legs=LEGS_CLOTH_WHITE, hands=HANDS_DEFAULT, arms=ARMS_DEFAULT,
-            torso=TORSO_CLOTH_WHITE, head=HEAD_DEFAULT, weapon1=WEAPON_DEFAULT,
-            weapon2=WEAPON_DEFAULT):
+            torso=TORSO_CLOTH_WHITE, head=HEAD_DEFAULT, main_hand=WEAPON_DEFAULT,
+            off_hand=WEAPON_DEFAULT, quiver=0):
         super(CharacterSprite, self).__init__()
         self.scene = scene
         self.scale = scale
@@ -82,8 +82,9 @@ class CharacterSprite(pygame.sprite.Sprite):
         self.arms = arms
         self.torso = torso
         self.head = head
-        self.weapon1 = weapon1
-        self.weapon2 = weapon2
+        self.main_hand = main_hand
+        self.off_hand = off_hand
+        self.quiver = quiver
         self.direction = 'south'
         self.animation = self.SLASH
         self.time_passed = 0
@@ -157,20 +158,31 @@ class CharacterSprite(pygame.sprite.Sprite):
             self.head_image = pygame.image.load(head_path)
         else:
             self.head_image = None
-        if WEAPON_DICT[self.sex][self.weapon1]:
-            weapon1_path = os.path.join(base_dir, WEAPON_DICT[self.sex][self.weapon1])
-            self.weapon1_image = pygame.image.load(weapon1_path)
+        self.main_hand_id = MAIN_HAND_WEAPONS[self.main_hand]
+        if WEAPON_DICT[self.sex][self.main_hand_id]:
+            main_hand_path = os.path.join(base_dir, WEAPON_DICT[self.sex][self.main_hand_id])
+            self.main_hand_image = pygame.image.load(main_hand_path)
         else:
-            self.weapon1_image = None
-        if WEAPON_DICT[self.sex][self.weapon2]:
-            weapon2_path = os.path.join(base_dir, WEAPON_DICT[self.sex][self.weapon2])
-            self.weapon2_image = pygame.image.load(weapon2_path)
+            self.main_hand_image = None
+        self.off_hand_id = OFF_HAND_WEAPONS[self.off_hand]
+        if WEAPON_DICT[self.sex][self.off_hand_id]:
+            off_hand_path = os.path.join(base_dir, WEAPON_DICT[self.sex][self.off_hand_id])
+            self.off_hand_image = pygame.image.load(off_hand_path)
         else:
-            self.weapon2_image = None
+            self.off_hand_image = None
 
-        self.layer_order = [self.body_image, self.eyes_image, self.nose_image, self.hair_image,
-            self.torso_image, self.legs_image, self.belt_image, self.arms_image, self.hands_image,
-            self.feets_image, self.head_image, self.weapon1_image, self.weapon2_image]
+        self.arrow_image = pygame.image.load(
+            os.path.join(base_dir, WEAPON_DICT[self.sex][WEAPON_LEFT_HAND_ARROW])
+        )
+        if self.quiver:
+            self.quiver_image = pygame.image.load(os.path.join(base_dir, QUIVER_PATH))
+        else:
+            self.quiver_image = None
+
+        self.layer_order = [self.quiver_image, self.body_image, self.eyes_image, self.nose_image,
+            self.hair_image, self.torso_image, self.legs_image, self.belt_image, self.arms_image,
+            self.hands_image, self.feets_image, self.head_image, self.main_hand_image,
+            self.arrow_image, self.off_hand_image]
 
     def change_animation(animation, animate_once=False):
         self.animation = animation
@@ -216,4 +228,4 @@ class CharacterSprite(pygame.sprite.Sprite):
 
     @property
     def char_id(self):
-        return "{s.sex}{s.body}{s.ears}{s.eyes}{s.nose}{s.hair_color}{s.hair_type}{s.belt}{s.feets}{s.hands}{s.legs}{s.arms}{s.torso}{s.head}{s.weapon1}{s.weapon2}".format(s=self)  # noqa
+        return "{s.sex}|{s.body}|{s.ears}|{s.eyes}|{s.nose}|{s.hair_color}|{s.hair_type}|{s.belt}|{s.feets}|{s.hands}|{s.legs}|{s.arms}|{s.torso}|{s.head}|{s.main_hand_id}|{s.off_hand_id}|{s.quiver}".format(s=self)  # noqa
