@@ -180,7 +180,7 @@ class CharacterSprite(pygame.sprite.Sprite):
             self.quiver_image = None
 
         self.layer_order = [self.quiver_image, self.body_image, self.eyes_image, self.nose_image,
-            self.hair_image, self.torso_image, self.legs_image, self.belt_image, self.arms_image,
+            self.hair_image, self.legs_image, self.torso_image, self.belt_image, self.arms_image,
             self.hands_image, self.feets_image, self.head_image, self.main_hand_image,
             self.arrow_image, self.off_hand_image]
 
@@ -228,4 +228,13 @@ class CharacterSprite(pygame.sprite.Sprite):
 
     @property
     def char_id(self):
-        return "{s.sex}|{s.body}|{s.ears}|{s.eyes}|{s.nose}|{s.hair_color}|{s.hair_type}|{s.belt}|{s.feets}|{s.hands}|{s.legs}|{s.arms}|{s.torso}|{s.head}|{s.main_hand_id}|{s.off_hand_id}|{s.quiver}".format(s=self)  # noqa
+        return "{s.sex:02}{s.body:02}{s.ears:02}{s.eyes:02}{s.nose:02}{s.hair_color:02}{s.hair_type:02}{s.belt:02}{s.feets:02}{s.hands:02}{s.legs:02}{s.arms:02}{s.torso:02}{s.head:02}{s.main_hand:02}{s.off_hand:02}{s.quiver:02}".format(s=self)  # noqa
+
+    @classmethod
+    def from_char_id(cls, scene, char_id, scale=1):
+        ids = [int(char_id[i:i+2]) for i in range(0, len(char_id), 2)]
+        print(ids)
+        return cls(scene, sex=ids[0], body=ids[1], ears=ids[2], eyes=ids[3], nose=ids[4],
+                   hair_color=ids[5], hair_type=ids[6], belt=ids[7], feets=ids[8], hands=ids[9],
+                   legs=ids[10], arms=ids[11], torso=ids[12], head=ids[13], main_hand=ids[14],
+                   off_hand=ids[15], quiver=ids[16])
