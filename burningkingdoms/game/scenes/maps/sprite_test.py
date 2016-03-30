@@ -51,6 +51,7 @@ class SpriteTestScene(Scene):
 
     def build_help_texts(self):
         self.help_text_texts = []
+        self.divider = self.font.render("-----------------------------------------", 1, (255, 0, 0))
         self.help_text_texts.append(self.font.render(
             "1: sex [{}]".format(self.char_sprite.sex), 1, (255, 0, 0))
         )
@@ -99,15 +100,11 @@ class SpriteTestScene(Scene):
         self.help_text_texts.append(self.font.render(
             "z: off hand [{}]".format(self.char_sprite.off_hand), 1, (255, 0, 0))
         )
-        self.help_text_texts.append(self.font.render(
-            "----------------------------------", 1, (255, 0, 0))
-        )
+        self.help_text_texts.append(self.divider)
         self.help_text_texts.append(self.font.render(
             "o/p: increase/reduce scaling [{}]".format(self.char_sprite.scale), 1, (255, 0, 0))
         )
-        self.help_text_texts.append(self.font.render(
-            "----------------------------------", 1, (255, 0, 0))
-        )
+        self.help_text_texts.append(self.divider)
         self.help_text_texts.append(self.font.render("u: animation once / cont", 1, (255, 0, 0)))
         self.help_text_texts.append(self.font.render("y: animation casting", 1, (255, 0, 0)))
         self.help_text_texts.append(self.font.render("x: animation spear", 1, (255, 0, 0)))
@@ -116,16 +113,12 @@ class SpriteTestScene(Scene):
         self.help_text_texts.append(self.font.render("b: animation bow", 1, (255, 0, 0)))
         self.help_text_texts.append(self.font.render("n: animation die", 1, (255, 0, 0)))
         self.help_text_texts.append(self.font.render("m: animation stand", 1, (255, 0, 0)))
-        self.help_text_texts.append(self.font.render(
-            "----------------------------------", 1, (255, 0, 0))
-        )
+        self.help_text_texts.append(self.divider)
         self.help_text_texts.append(self.font.render("up: look up", 1, (255, 0, 0)))
         self.help_text_texts.append(self.font.render("down: look down", 1, (255, 0, 0)))
         self.help_text_texts.append(self.font.render("left: look left", 1, (255, 0, 0)))
         self.help_text_texts.append(self.font.render("right: look right", 1, (255, 0, 0)))
-        self.help_text_texts.append(self.font.render(
-            "----------------------------------", 1, (255, 0, 0))
-        )
+        self.help_text_texts.append(self.divider)
         self.help_text_texts.append(self.font.render(
             "CharID: {}".format(self.char_sprite.char_id), 1, (255, 0, 0))
         )
@@ -137,7 +130,7 @@ class SpriteTestScene(Scene):
         self.build_help_texts()
         for help_text in self.help_text_texts:
             rect = help_text.get_rect()
-            rect.left = surface.get_rect().right - 380
+            rect.left = surface.get_rect().right - self.divider.get_rect().width
             rect.top = top
             surface.blit(help_text, rect)
             top += rect.height
