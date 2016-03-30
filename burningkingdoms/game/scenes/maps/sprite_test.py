@@ -237,12 +237,12 @@ class SpriteTestScene(Scene):
 
     def _handle_key_t(self):
         self.char_sprite.main_hand += 1
-        if self.char_sprite.main_hand > len(MAIN_HAND_WEAPONS):
+        if self.char_sprite.main_hand > (len(MAIN_HAND_WEAPONS) - 1):
             self.char_sprite.main_hand = 0
 
     def _handle_key_z(self):
         self.char_sprite.off_hand += 1
-        if self.char_sprite.off_hand > len(OFF_HAND_WEAPONS):
+        if self.char_sprite.off_hand > (len(OFF_HAND_WEAPONS) - 1):
             self.char_sprite.off_hand = 0
 
     def _handle_key_u(self):
