@@ -828,6 +828,13 @@ WEAPON_DICT = {
         WEAPON_RIGHT_HAND_GREATBOW: 'data/src/weapons/right_hand/male/greatbow.png',
         WEAPON_RIGHT_HAND_RECURVEBOW: 'data/src/weapons/right_hand/male/recurvebow.png',
         WEAPON_RIGHT_HAND_WOODWAND: 'data/src/weapons/right_hand/male/woodwand_male.png',
+        WEAPON_OVERSIZE_BOTH_HANDS_SPEAR: 'data/src/weapons/oversize/two_hand/either/spear.png',
+        WEAPON_OVERSIZE_BOTH_HANDS_DRAGONSPEAR: 'data/src/weapons/oversize/two_hand/either/dragonspear.png',
+        WEAPON_OVERSIZE_BOTH_HANDS_TRIDENT: 'data/src/weapons/oversize/two_hand/either/trident.png',
+        WEAPON_OVERSIZE_RIGHT_HAND_LONGSWORD: 'data/src/weapons/oversize/right_hand/male/longsword_male.png',
+        WEAPON_OVERSIZE_RIGHT_HAND_MACE: 'data/src/weapons/oversize/right_hand/male/mace_male.png',
+        WEAPON_OVERSIZE_RIGHT_HAND_SABER: 'data/src/weapons/oversize/right_hand/male/saber_male.png',
+        WEAPON_OVERSIZE_RIGHT_HAND_RAPIR: 'data/src/weapons/oversize/right_hand/male/rapier_male.png',
     },
     SEX_FEMALE: {
         WEAPON_DEFAULT: None,
@@ -842,5 +849,12 @@ WEAPON_DICT = {
         WEAPON_RIGHT_HAND_GREATBOW: 'data/src/weapons/right_hand/female/greatbow.png',
         WEAPON_RIGHT_HAND_RECURVEBOW: 'data/src/weapons/right_hand/female/recurvebow.png',
         WEAPON_RIGHT_HAND_WOODWAND: 'data/src/weapons/right_hand/female/woodwand_female.png',
+        WEAPON_OVERSIZE_BOTH_HANDS_SPEAR: 'data/src/weapons/oversize/two_hand/either/spear.png',
+        WEAPON_OVERSIZE_BOTH_HANDS_DRAGONSPEAR: 'data/src/weapons/oversize/two_hand/either/dragonspear.png',
+        WEAPON_OVERSIZE_BOTH_HANDS_TRIDENT: 'data/src/weapons/oversize/two_hand/either/trident.png',
+        WEAPON_OVERSIZE_RIGHT_HAND_LONGSWORD: 'data/src/weapons/oversize/right_hand/female/longsword_female.png',
+        WEAPON_OVERSIZE_RIGHT_HAND_MACE: 'data/src/weapons/oversize/right_hand/female/mace_female.png',
+        WEAPON_OVERSIZE_RIGHT_HAND_SABER: 'data/src/weapons/oversize/right_hand/female/saber_female.png',
+        WEAPON_OVERSIZE_RIGHT_HAND_RAPIR: 'data/src/weapons/oversize/right_hand/female/rapier_female.png',
     }
 }
