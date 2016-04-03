@@ -9,7 +9,10 @@ class Game(object):
     def __init__(self, config):
         self.config = config
         pygame.init()
-        self.screen = pygame.display.set_mode(config.resolution)
+        screen_config = [config.resolution]
+        if int(config.fullscreen):
+            screen_config.append(pygame.FULLSCREEN)
+        self.screen = pygame.display.set_mode(*screen_config)
         self.screen.fill((0, 0, 0))
         pygame.display.flip()
         self.running = False
