@@ -126,6 +126,7 @@ class SpriteTestScene(Scene):
     def render(self):
         surface = pygame.Surface(self.screen.get_size())
         surface.fill(self.fill)
+        self.sprites.draw(surface)
         top = 0
         self.build_help_texts()
         for help_text in self.help_text_texts:
@@ -135,7 +136,6 @@ class SpriteTestScene(Scene):
             surface.blit(help_text, rect)
             top += rect.height
             surface.blit(help_text, rect)
-        self.sprites.draw(surface)
         return surface
 
     def update(self):
@@ -239,6 +239,8 @@ class SpriteTestScene(Scene):
         self.char_sprite.main_hand += 1
         if self.char_sprite.main_hand > (len(MAIN_HAND_WEAPONS) - 1):
             self.char_sprite.main_hand = 0
+            self.char_sprite.active_frame = 0
+            self.char_sprite.time_passed = 0
 
     def _handle_key_z(self):
         self.char_sprite.off_hand += 1
@@ -275,21 +277,35 @@ class SpriteTestScene(Scene):
 
     def _handle_key_y(self):
         self.char_sprite.animation = self.char_sprite.CASTING
+        self.char_sprite.active_frame = 0
+        self.char_sprite.time_passed = 0
 
     def _handle_key_x(self):
         self.char_sprite.animation = self.char_sprite.SPEAR
+        self.char_sprite.active_frame = 0
+        self.char_sprite.time_passed = 0
 
     def _handle_key_c(self):
         self.char_sprite.animation = self.char_sprite.WALK
+        self.char_sprite.active_frame = 0
+        self.char_sprite.time_passed = 0
 
     def _handle_key_v(self):
         self.char_sprite.animation = self.char_sprite.SLASH
+        self.char_sprite.active_frame = 0
+        self.char_sprite.time_passed = 0
 
     def _handle_key_b(self):
         self.char_sprite.animation = self.char_sprite.BOW
+        self.char_sprite.active_frame = 0
+        self.char_sprite.time_passed = 0
 
     def _handle_key_n(self):
         self.char_sprite.animation = self.char_sprite.DIE
+        self.char_sprite.active_frame = 0
+        self.char_sprite.time_passed = 0
 
     def _handle_key_m(self):
         self.char_sprite.animation = self.char_sprite.STAND
+        self.char_sprite.active_frame = 0
+        self.char_sprite.time_passed = 0

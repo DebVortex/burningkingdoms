@@ -7,6 +7,7 @@ from .constants import *  # noqa
 
 class CharacterSprite(pygame.sprite.Sprite):
     SPRITE_SIZE = 64
+    OVERSIZE_SPRITE_SIZE = 192
     ANIMATION_SPEED = 4.0
     CASTING = 0
     SPEAR = 1
@@ -15,6 +16,7 @@ class CharacterSprite(pygame.sprite.Sprite):
     BOW = 4
     DIE = 5
     STAND = 6
+    OVERSIZE = 7
     ANIMATIONS = {
         CASTING: {
             'north': [(0, 0), (0, 1), (0, 2), (0, 3), (0, 4), (0, 5), (0, 6)],
@@ -24,9 +26,9 @@ class CharacterSprite(pygame.sprite.Sprite):
         },
         SPEAR: {
             'north': [(4, 0), (4, 1), (4, 2), (4, 3), (4, 4), (4, 5), (4, 6), (4, 7)],
-            'west': [(5, 0), (5, 1), (5, 2), (5, 3), (5, 4), (5, 5), (5, 6), (4, 7)],
-            'south': [(6, 0), (6, 1), (6, 2), (6, 3), (6, 4), (6, 5), (6, 6), (4, 7)],
-            'east': [(7, 0), (7, 1), (7, 2), (7, 3), (7, 4), (7, 5), (7, 6), (4, 7)],
+            'west': [(5, 0), (5, 1), (5, 2), (5, 3), (5, 4), (5, 5), (5, 6), (5, 7)],
+            'south': [(6, 0), (6, 1), (6, 2), (6, 3), (6, 4), (6, 5), (6, 6), (6, 7)],
+            'east': [(7, 0), (7, 1), (7, 2), (7, 3), (7, 4), (7, 5), (7, 6), (7, 7)],
         },
         WALK: {
             'north': [(8, 0), (8, 1), (8, 2), (8, 3), (8, 4), (8, 5), (8, 6), (8, 7), (8, 8)],
@@ -58,6 +60,18 @@ class CharacterSprite(pygame.sprite.Sprite):
             'south': [(2, 0)],
             'east': [(3, 0)],
         },
+        OVERSIZE: {
+            'north': [(7, 0), (7, 1), (7, 2), (7, 3), (7, 4), (7, 5), (7, 6), (7, 7)],
+            'west': [(8, 0), (8, 1), (8, 2), (8, 3), (8, 4), (8, 5), (8, 6), (8, 7)],
+            'south': [(9, 0), (9, 1), (9, 2), (9, 3), (9, 4), (9, 5), (9, 6), (9, 7)],
+            'east': [(10, 0), (10, 1), (10, 2), (10, 3), (10, 4), (10, 5), (10, 6), (10, 7)],
+        },
+    }
+    OVERSIZE_POS = {
+        'north': [(22, 1), (22, 4), (22, 7), (22, 10), (22, 13), (22, 16), (22, 19), (22, 22)],
+        'west': [(25, 1), (25, 4), (25, 7), (25, 10), (25, 13), (25, 16), (25, 19), (25, 22)],
+        'south': [(28, 1), (28, 4), (28, 7), (28, 10), (28, 13), (28, 16), (28, 19), (28, 22)],
+        'east': [(31, 1), (31, 4), (31, 7), (31, 10), (31, 13), (31, 16), (31, 19), (31, 22)],
     }
 
     def __init__(self, scene, scale=1.0, sex=SEX_MALE, body=BODY_LIGHT, ears=EAR_NORMAL, eyes=EYE_BLUE,
@@ -189,25 +203,78 @@ class CharacterSprite(pygame.sprite.Sprite):
         self.active_frame = 0
         self.time_passed = 0
 
+    def is_oversize_weapon(self):
+        return self.is_oversize_spear() or self.is_oversize_sword()
+
+    def is_oversize_spear(self):
+        return self.main_hand_id in OVERSIZE_SPEARS
+
+    def is_oversize_sword(self):
+        return self.main_hand_id in OVERSIZE_SWORDS
+
     def build_sprite(self):
-        sprite_rect = self.body_image.get_rect()
-        sprite = pygame.Surface((self.scale * sprite_rect.width, self.scale * sprite_rect.height))
-        for layer in self.layer_order:
+        sprite = pygame.Surface(
+            (self.scale * 8 * self.OVERSIZE_SPRITE_SIZE, self.scale * 11 * self.OVERSIZE_SPRITE_SIZE)
+        )
+        for idx, layer in enumerate(self.layer_order):
+            is_weapon_layer = idx == (len(self.layer_order) - 3)
             if layer:
-                scaled_layer = pygame.transform.scale(
-                    layer, (
-                        int(self.scale * layer.get_rect().width),
-                        int(self.scale * layer.get_rect().height),
+                if is_weapon_layer and self.is_oversize_weapon():
+                    animation = self.SPEAR if self.is_oversize_spear() else self.SLASH
+                    for direction in self.ANIMATIONS[animation]:
+                        oversize_frame = 0
+                        for row, col in self.ANIMATIONS[animation][direction]:
+                            targ_row, targ_col = self.OVERSIZE_POS[direction][oversize_frame]
+                            sprite.blit(
+                                sprite,
+                                (
+                                    targ_col * self.SPRITE_SIZE * self.scale,
+                                    targ_row * self.SPRITE_SIZE * self.scale
+                                ),
+                                (
+                                    col * self.SPRITE_SIZE * self.scale,
+                                    row * self.SPRITE_SIZE * self.scale,
+                                    self.SPRITE_SIZE * self.scale,
+                                    self.SPRITE_SIZE * self.scale
+                                )
+                            )
+                            oversize_frame += 1
+                    scaled_layer = pygame.transform.scale(
+                        layer, (
+                            int(self.scale * layer.get_rect().width),
+                            int(self.scale * layer.get_rect().height),
+                        )
                     )
-                )
-                sprite.blit(scaled_layer, (0, 0))
+                    row, col = [pos * self.OVERSIZE_SPRITE_SIZE * self.scale for pos in self.ANIMATIONS[self.OVERSIZE]['north'][0]]
+                    sprite.blit(scaled_layer, (col, row))
+                else:
+                    scaled_layer = pygame.transform.scale(
+                        layer, (
+                            int(self.scale * layer.get_rect().width),
+                            int(self.scale * layer.get_rect().height),
+                        )
+                    )
+                    sprite.blit(scaled_layer, (0, 0))
         self.sprite_image = sprite
 
     def draw_image(self):
-        self.image = pygame.Surface((self.scale * self.SPRITE_SIZE, self.scale * self.SPRITE_SIZE))
+        self.image = pygame.Surface(
+            (self.scale * self.OVERSIZE_SPRITE_SIZE, self.scale * self.OVERSIZE_SPRITE_SIZE)
+        )
         self.rect = self.image.get_rect()
 
-        animation_length = len(self.ANIMATIONS[self.animation][self.direction])
+        if self.animation == self.SLASH and self.is_oversize_sword():
+            self.animation = self.OVERSIZE
+        if self.animation == self.SPEAR and self.is_oversize_spear():
+            self.animation = self.OVERSIZE
+
+        if self.animation == self.OVERSIZE and not self.is_oversize_weapon():
+            self.animation = self.STAND
+
+        if self.animation == self.OVERSIZE and self.is_oversize_sword():
+            animation_length = 6
+        else:
+            animation_length = len(self.ANIMATIONS[self.animation][self.direction])
 
         self.time_passed += self.scene.game.dt
         if self.time_passed >= self.change_time:
@@ -218,13 +285,22 @@ class CharacterSprite(pygame.sprite.Sprite):
 
         row, col = self.ANIMATIONS[self.animation][self.direction][self.active_frame]
 
-        self.image.blit(self.sprite_image, (0, 0), (
-            col * self.SPRITE_SIZE * self.scale,
-            row * self.SPRITE_SIZE * self.scale,
-            self.SPRITE_SIZE * self.scale,
-            self.SPRITE_SIZE * self.scale,
+        if self.animation == self.OVERSIZE:
+            self.image.blit(self.sprite_image, (0, 0), (
+                col * self.OVERSIZE_SPRITE_SIZE * self.scale,
+                row * self.OVERSIZE_SPRITE_SIZE * self.scale,
+                self.OVERSIZE_SPRITE_SIZE * self.scale,
+                self.OVERSIZE_SPRITE_SIZE * self.scale,
+                )
             )
-        )
+        else:
+            self.image.blit(self.sprite_image, (64 * self.scale, 64 * self.scale), (
+                col * self.SPRITE_SIZE * self.scale,
+                row * self.SPRITE_SIZE * self.scale,
+                self.SPRITE_SIZE * self.scale,
+                self.SPRITE_SIZE * self.scale,
+                )
+            )
 
     @property
     def char_id(self):
